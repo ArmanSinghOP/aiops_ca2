@@ -13,10 +13,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application files and model
-COPY main.py .
-COPY pytest.ini .
-COPY models/ ./models/
-COPY tests/ ./tests/
+COPY . .
 
 # Expose FastAPI default port
 EXPOSE 8000
